@@ -7,11 +7,6 @@ test.describe("Currency Exchange Form", () => {
     let loginPage: LoginPage
     //Login
     test.beforeEach(async ({page}) => {
-        // await page.goto('http://zero.webappsecurity.com/index.html')
-        // await page.click('#signin_button')
-        // await page.type('#user_login', 'username')
-        // await page.type('#user_password', 'password')
-        // await page.click('text=Sign in')
         homePage = new HomePage(page)
         loginPage = new LoginPage(page)
 

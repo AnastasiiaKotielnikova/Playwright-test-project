@@ -4,7 +4,6 @@ import { getRandomNumber, getRandomString } from '../../utils/data-helpers'
 test.describe.only("Tips & Tricks Section", () => {
     test.only("TestInfo Object", async ({page}, testInfo) => {
         await page.goto('https://www.example.com')
-        // console.log(testInfo.expectedStatus)
         let newNumber = await getRandomNumber()
         let newString = await getRandomString()
         console.log(newNumber)

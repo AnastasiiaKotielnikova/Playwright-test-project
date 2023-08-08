@@ -12,7 +12,6 @@ export class LoginPage extends AbstractPage{
 
     //Init selectors using constructor
     constructor(page:Page){
-        // this.page = page
         super(page)
         this.usernameInput = page.locator('#user_login')
         this.passwordInput = page.locator('#user_password')

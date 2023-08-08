@@ -10,30 +10,18 @@ test.describe.parallel("Login / Logout Flow", () => {
         loginPage = new LoginPage(page)
         homePage = new HomePage(page)
         await homePage.visit()
-        // await page.goto('http://zero.webappsecurity.com/index.html')
     })
     //Negative Scenario
     test("Negative Scenario for login", async({page}) => {
-        // await page.click('#signin_button')
         await homePage.clickOnSignIn()
-        // await page.type('#user_login', 'invalid username')
-        // await page.type('#user_password', 'invalid password')
-        // await page.click('text=Sign in')
         await loginPage.login('invalid username', 'invalid password')
         
         await loginPage.assertErrorMessage()
-
-        // const errorMessage = await page.locator('.alert-error')
-        // await expect(errorMessage).toContainText('Login and/or password are wrong.')
     })
 
     //Positive Scenario
     test("Positive Scenario for login + logout", async({page}) => {
-        // await page.click('#signin_button')
         await homePage.clickOnSignIn()
-        // await page.type('#user_login', 'username')
-        // await page.type('#user_password', 'password')
-        // await page.click('text=Sign in')
         await loginPage.login('username', 'password')
 
         await page.goto('http://zero.webappsecurity.com/bank/transfer-funds.html')

@@ -74,9 +74,6 @@ test.describe.parallel.only("Hooks", () => {
     })
     
     test("Screenshots", async({page}) => {
-        // //step is load webkit
-        // await page.goto('https://www.example.com')
-        // //take screenshot of full page
         await page.screenshot({path: 'screenshot.png', fullPage: true})
     })
     
